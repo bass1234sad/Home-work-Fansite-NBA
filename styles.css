@@ -1,0 +1,306 @@
+/* การตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #0f1115;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* ส่วนหัว Hero Banner */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #181b22 0%, #0d0f12 100%);
+    padding: 80px 20px 60px 20px;
+    text-align: center;
+    border-bottom: 3px solid #ff6b35;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(255, 107, 53, 0.15);
+    color: #ff6b35;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.4);
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+}
+
+/* Container จัดหน้ากระดาษ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 45px;
+    font-size: 1.05rem;
+}
+
+/* การ์ดนักกีฬา (Cards Grid) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.player-card {
+    background-color: #1a1e26;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2d3340;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff6b35;
+}
+
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background-color: #0d0f12;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.jersey-num {
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 14px;
+    border-radius: 6px;
+    border-left: 3px solid #ff6b35;
+}
+
+.card-body {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ff6b35;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.card-body h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.nickname {
+    color: #f59e0b;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.desc {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.signature-moves {
+    background-color: #12151b;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    margin-bottom: 16px;
+    border-left: 3px solid #3b82f6;
+}
+
+.signature-moves strong {
+    color: #60a5fa;
+}
+
+.achievements {
+    list-style: none;
+    border-top: 1px solid #2d3340;
+    padding-top: 12px;
+}
+
+.achievements li {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 6px;
+}
+
+/* ตารางเปรียบเทียบ (Comparison Table) */
+.comparison-section {
+    margin-top: 50px;
+    background-color: #1a1e26;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #2d3340;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th, 
+.comparison-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #2d3340;
+}
+
+.comparison-table th {
+    background-color: #12151b;
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: #222733;
+}
+
+.comparison-table td strong {
+    color: #ffffff;
+}
+
+/* ส่วน Quote กล่องคำคม */
+.quote-box {
+    margin-top: 45px;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(245, 158, 11, 0.05));
+    border-left: 4px solid #ff6b35;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.quote-box blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.quote-box cite {
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+/* Footer ส่วนท้ายเว็บ */
+footer {
+    background-color: #090a0d;
+    padding: 35px 20px;
+    text-align: center;
+    border-top: 1px solid #222733;
+}
+
+.footer-content p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.footer-content strong {
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 0.85rem !important;
+    color: #64748b !important;
+    margin-top: 10px;
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .comparison-section {
+        padding: 20px 15px;
+    }
+}
